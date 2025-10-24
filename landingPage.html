@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDW - Disclosure Solutions for Australian Issuers | Australian Securitisation Forum 2025</title>
+    <meta name="description"
+        content="European DataWarehouse supports Australian issuers in complying with EU and UK Securitisation Regulation disclosure requirements. Meet us at the Australian Securitisation Forum Conference 2025.">
+
+    <!-- LinkedIn Insight Tag - REPLACE WITH ACTUAL TAG -->
+    <script type="text/javascript">
+        <!-- Add LinkedIn Insight Tag here -->
+        /*
+        Example:
+        _linkedin_partner_id = "YOUR_PARTNER_ID";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+        */
+    </script>
+
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* EDW Brand Colors */
+            --color-navy-dark: #1a2332;
+            --color-navy-medium: #2d3e50;
+            --color-blue-accent: #4a90e2;
+            --color-gray-light: #f5f7fa;
+            --color-gray-medium: #8b95a5;
+            --color-gray-dark: #4a5568;
+            --color-white: #ffffff;
+            --color-text-dark: #1a1a1a;
+
+            /* Typography */
+            --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            --font-heading: 'Helvetica Neue', Arial, sans-serif;
+
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 6rem;
+
+            /* Container */
+            --container-max-width: 1200px;
+            --container-padding: 1.5rem;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--color-text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: var(--color-white);
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            height: clamp(50px, 5vw, 90px);
+            width: auto;
+}
+
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            min-height: 500px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            min-height: 400px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* background: linear-gradient(135deg, rgba(26, 45, 66, 0.75) 0%, rgba(15, 28, 46, 0.85) 100%); */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: var(--container-max-width);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 0 var(--container-padding);
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 3vw, 3.5rem);
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            line-height: 1.3;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            background: var(--color-white);
+            padding: clamp(3rem, 7vw, 5rem) var(--container-padding);
+            border-bottom: 1px solid #e8edf3;
+        }
+
+        .intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: justify;
+            font-size: 1.0625rem;
+            line-height: 1.9;
+            color: #4a5568;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: clamp(3rem, 7vw, 5rem) var(--container-padding);
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            border-bottom: 1px solid #e8edf3;
+        }
+
+        .content-section:nth-child(even) {
+            background: #fafbfc;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3.5vw, 2rem);
+            font-weight: 600;
+            color: #1a2d42;
+            margin-bottom: clamp(1.5rem, 3vw, 2rem);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        .section-content {
+            font-size: 1.0625rem;
+            line-height: 1.9;
+            color: #4a5568;
+            margin-bottom: var(--spacing-md);
+            text-align: justify;
+        }
+
+        .section-content ul {
+            margin: clamp(1rem, 3vw, 1.5rem) 0;
+            padding-left: 1.25rem;
+            list-style: none;
+        }
+
+        .section-content li {
+            margin-bottom: 0.875rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .section-content li::before {
+            content: '–';
+            position: absolute;
+            left: 0;
+            color: var(--color-blue-accent);
+            font-weight: 600;
+        }
+
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .benefit-card {
+            background: var(--color-white);
+            padding: var(--spacing-md);
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .benefit-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-navy-dark);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .benefit-description {
+            color: var(--color-gray-dark);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+.benefit-card {
+  text-align: center;
+}
+
+.benefit-icon {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+     .conference-info {
+  background: linear-gradient(135deg, #1b2d42 0%, #0d1a2c 100%);
+  color: var(--color-white);
+  padding: clamp(3rem, 7vw, 5rem) var(--container-padding);
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* Subtle decorative pattern overlay */
+.conference-info::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7z' fill='%23ffffff' fill-opacity='0.03'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Beautiful rounded content box */
+.conference-details {
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 3rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+
+.conference-details:hover {
+  transform: translateY(-5px);
+}
+
+/* Headline */
+.conference-details h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Text styling */
+.event-details {
+  font-size: 1.125rem;
+  margin: 1.5rem 0;
+  line-height: 1.8;
+  color: #e2e8f0;
+}
+
+.event-details strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+
+
+        .laptop-slider-section {
+            background: linear-gradient(180deg, #e8e8e8 0%, #2c4a7c 50%);
+            padding: 60px 20px 120px;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .laptop-wrapper {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .laptop-frame {
+            position: relative;
+            width: 100%;
+        }
+
+        .laptop-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .screen-slider {
+            position: absolute;
+            top: 4.8%;
+            left: 14%;
+            width: 72%;
+            height: 63%;
+            overflow: hidden;
+            background: #000;
+            border-radius: 3px;
+        }
+
+        .slides-container {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+            height: 100%;
+            width: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            flex-shrink: 0;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: #2c4a7c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            z-index: 10;
+            transition: all 0.3s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .arrow:hover {
+            background: #1e3456;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .arrow:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .arrow-left {
+            left: -25px;
+        }
+
+        .arrow-right {
+            right: -25px;
+        }
+
+        .dots-container {
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 5;
+        }
+
+        .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .dot:hover {
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .dot.active {
+            background: white;
+            border-color: #2c4a7c;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .arrow {
+                width: 45px;
+                height: 45px;
+                font-size: 24px;
+            }
+
+            .arrow-left {
+                left: -22px;
+            }
+
+            .arrow-right {
+                right: -22px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .laptop-slider-section {
+                padding: 40px 15px 100px;
+            }
+
+            .container {
+                padding: 0 50px;
+            }
+
+            .arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .arrow-left {
+                left: -10px;
+            }
+
+            .arrow-right {
+                right: -10px;
+            }
+
+            .dots-container {
+                bottom: -60px;
+            }
+
+            .dot {
+                width: 12px;
+                height: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .laptop-slider-section {
+                padding: 30px 10px 80px;
+            }
+
+            .container {
+                padding: 0 45px;
+            }
+
+            .arrow {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+
+            .arrow-left {
+                left: -5px;
+            }
+
+            .arrow-right {
+                right: -5px;
+            }
+
+            .dots-container {
+                bottom: -50px;
+                gap: 10px;
+            }
+
+            .dot {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .container {
+                padding: 0 50px;
+            }
+
+            .arrow {
+                width: 32px;
+                height: 32px;
+                font-size: 16px;
+            }
+
+            .arrow-left {
+                left: -10px;
+            }
+
+            .arrow-right {
+                right: -10px;
+            }
+        }
+
+        /* Optional: Add smooth fade transition */
+        .slide {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0.7;
+            }
+            to {
+                opacity: 1;
+            }
+        }        /* Form Section */
+        .form-section {
+            background: #fafbfc;
+            padding: clamp(3rem, 7vw, 5rem) var(--container-padding);
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--color-white);
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-intro {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            color: var(--color-gray-dark);
+            font-size: 1.0625rem;
+            line-height: 1.7;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--color-navy-dark);
+            margin-bottom: var(--spacing-xs);
+            font-size: 0.9375rem;
+        }
+
+        .form-label .required {
+            color: #e53e3e;
+            margin-left: 2px;
+        }
+
+        .form-input,
+        .form-select {
+            padding: 0.75rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: var(--font-primary);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--color-blue-accent);
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        }
+
+        .form-input::placeholder {
+            color: var(--color-gray-medium);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-xs);
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+
+        .radio-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .radio-option label {
+            cursor: pointer;
+            font-size: 0.9375rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-md);
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .checkbox-group label {
+            font-size: 0.875rem;
+            color: var(--color-gray-dark);
+            cursor: pointer;
+            line-height: 1.5;
+        }
+
+        .checkbox-group label a {
+            color: var(--color-blue-accent);
+            text-decoration: none;
+        }
+
+        .checkbox-group label a:hover {
+            text-decoration: underline;
+        }
+
+        .submit-btn {
+            background: var(--color-navy-dark);
+            color: var(--color-white);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: var(--spacing-sm);
+        }
+
+        .submit-btn:hover {
+            background: var(--color-navy-medium);
+            transform: translateY(-2px);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn:disabled {
+            background: var(--color-gray-medium);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .error-message {
+            color: #e53e3e;
+            font-size: 0.875rem;
+            margin-top: 4px;
+        }
+
+
+  /* ===== CTA Section ===== */
+.footer-cta {
+  background: #1a2d42; /* solid deep blue background */
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.footer-cta h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.footer-cta p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.footer-cta a {
+  color: #4fa3ff; /* soft blue accent */
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer-cta a:hover {
+  color: #ffffff;
+}
+
+/* ===== Footer Section ===== */
+.footer {
+  background: #0f1c2e; /* solid dark navy */
+  color: #fff;
+  padding: 30px 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #4fa3ff;
+}
+
+.footer-links .divider {
+  opacity: 0.5;
+}
+
+.copyright {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .footer-cta h2 {
+    font-size: 1.4rem;
+  }
+
+  .footer-cta p {
+    font-size: 1rem;
+  }
+}
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            :root {
+                --container-padding: 1rem;
+                --spacing-xl: 2.5rem;
+                --spacing-xxl: 3rem;
+            }
+
+            .logo {
+                height: 40px;
+            }
+
+            .hero,
+            .hero-image {
+                min-height: 350px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-container {
+                padding: var(--spacing-md);
+            }
+
+            .radio-group {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <img src="/public/EDWLOGO.jpg" alt="European DataWarehouse" class="logo">
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="/public/sydneyimg.jpg" alt="Sydney Opera House and Harbour Bridge" class="hero-image">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Disclosure Solutions for Australian Issuers</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="intro-content">
+            <p>European DataWarehouse is coming to Australia. Meet us at the Australian Securitisation Forum Conference
+                2025 in Sydney, November 25-26. EDW supports Australian issuers in complying with EU and UK
+                Securitisation Regulation disclosure requirements with secure technical solutions and guidance on
+                reporting obligations.</p>
+        </div>
+    </section>
+
+    <!-- Transparency Requirements Section -->
+    <section class="content-section">
+        <h2 class="section-title">Transparency and Disclosure Requirements in the EU for Australian Issuers</h2>
+        <div class="section-content">
+            <p>Entities seeking to issue a securitisation to EU investors are obliged to meet Article 7 requirements of
+                the Securitisation Regulation (EU) 2017/2402.</p>
+            <p>Under Article 5(1)(e), institutional investors have to verify the availability of the information as per
+                the transparency obligations set out in Article 7 of the EU Securitisation Regulation.</p>
+            <p>As such, Australian issuers are subject to providing:</p>
+            <ul>
+                <li>Key underlying documentation to investors pre-pricing</li>
+                <li>Loan-level data and investor reports adhering to the ESMA-prescribed format</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- EDW Solutions Section -->
+    <section class="content-section">
+        <h2 class="section-title">Leveraging EDW Reporting Solutions for EU Regulatory Compliance</h2>
+        <div class="section-content">
+            <p>Australian issuers can upload data in the prescribed format to EDW's platform to help EU investors meet
+                their due diligence obligations. Meet our team at the Australian Securitisation Forum Conference 2025 to
+                learn how we can streamline your European market access.</p>
+            <p>All investors worldwide, who are registered users of EDW's platform, benefit from seamlessly accessing
+                all publicly available transaction data from a centralised platform.</p>
+            <p>Issuers can also leverage free tools such as EDW Deal Reports to gain comprehensive insights into the
+                market and to compare a deal's parameters to others at a glance.</p>
+            <p>Additionally, EDW provides an online CSV2XML Converter to help issuers easily prepare data in the XML
+                file format, as prescribed by ESMA. Users can populate their templates in the easy-to-use CSV format and
+                upload these files to EDW's EDITOR platform to be converted with one click.</p>
+            <p>EDW also offers a bespoke RBA to ESMA template converter created specifically to meet the disclosure
+                needs of Australian issuers wishing to expand into European markets.</p>
+        </div>
+    </section>
+
+<section class="conference-info">
+    <div class="conference-details">
+        <h2>Meet EDW at the Australian Securitisation Forum 2025</h2>
+        <div class="event-details">
+            <p>Visit our booth at the Australian Securitisation Forum Conference 2025</p>
+            <strong>November 25–26, 2025</strong>
+            <strong>Hyatt Regency Sydney</strong>
+            <p style="margin-top: 1.5rem;">
+                Schedule a meeting with our team to discuss how EDW can support your European market access
+                requirements.
+            </p>
+            <p style="margin-top: 1rem;">
+                Not attending the conference? No problem. Fill out the form below and we'll get in touch with you
+                shortly to discuss how EDW can help your organisation.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Image slider -->
+<section class="laptop-slider-section">
+    <div class="container">
+        <div class="laptop-wrapper">
+            <!-- Navigation Arrows -->
+            <button class="arrow arrow-left" onclick="changeSlide(-1)" aria-label="Previous slide">‹</button>
+            <button class="arrow arrow-right" onclick="changeSlide(1)" aria-label="Next slide">›</button>
+
+            <!-- Laptop Frame -->
+            <div class="laptop-frame">
+                <!-- Replace this src with your actual laptop frame image -->
+                <img src="/public/monitor_mockup.png" alt="Laptop Frame">
+
+                <!-- Screen Content Slider -->
+                <div class="screen-slider">
+                    <div class="slides-container" id="slidesContainer">
+                        <!-- Slide 1 -->
+                        <div class="slide">
+                            <img src="/public/Editor-Slide1.jpg" alt="Hero Section"
+                                onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;font-size:18px;\'>Slide 1: Hero Section</div>'">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="slide">
+                            <img src="/public//Editor-Slide2.jpg" alt="CSV to XML Converter"
+                                onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;font-size:18px;\'>Slide 2: CSV Converter</div>'">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="slide">
+                            <img src="/public/Editor-Slide3.jpg" alt="Deal Information"
+                                onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;font-size:18px;\'>Slide 3: Deal Info</div>'">
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="slide">
+                            <img src="/public/Editor-Slide4.jpg" alt="Insights Dashboard"
+                                onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;font-size:18px;\'>Slide 4: Insights</div>'">
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="slide">
+                            <img src="/public//Editor-Slide5.jpg" alt="Dashboard"
+                                onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;font-size:18px;\'>Slide 5: Dashboard</div>'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dot Indicators -->
+            <div class="dots-container" id="dotsContainer">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+                <span class="dot" onclick="goToSlide(3)"></span>
+                <span class="dot" onclick="goToSlide(4)"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    let currentSlide = 0;
+    const slidesContainer = document.getElementById('slidesContainer');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = 5;
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+
+        // Loop around
+        if (currentSlide < 0) {
+            currentSlide = totalSlides - 1;
+        } else if (currentSlide >= totalSlides) {
+            currentSlide = 0;
+        }
+
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        // Move slides
+        slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    // Optional: Auto-play
+    // Uncomment below to enable auto-play every 5 seconds
+    /*
+    setInterval(() => {
+        changeSlide(1);
+    }, 5000);
+    */
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            changeSlide(-1);
+        } else if (e.key === 'ArrowRight') {
+            changeSlide(1);
+        }
+    });
+
+    // Touch/Swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const slider = document.querySelector('.screen-slider');
+
+    slider.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    slider.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) {
+            changeSlide(1); // Swipe left
+        }
+        if (touchEndX > touchStartX + 50) {
+            changeSlide(-1); // Swipe right
+        }
+    }
+</script>
+    <!-- Private Area Section -->
+    <section class="content-section">
+        <h2 class="section-title">Single Access Point for Private Transactions</h2>
+        <div class="section-content">
+            <p>EDW's robust technology facilitates the controlled transmission of files for private transactions via its
+                bespoke Private Area.</p>
+            <p>Issuers using EDW's Private Area have total control over access at both organisation and user level and
+                can then limit the data access to selected investors, rating agencies, and supervisory authorities.</p>
+            <p>With over 300 private transactions hosted in EDW's Private Area, selected market participants can access
+                all underlying exposures and other relevant documentation, via a user-friendly interface.</p>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="content-section">
+        <h2 class="section-title">Secure, Robust, Reliable Technology</h2>
+        <div class="section-content">
+            <p>Australian issuers can benefit from EDW's expertise and position in the market as a registered
+                Securitisation Repository to ensure the safe transmission of data to the relevant parties. In line with
+                the legal requirements set in the Commission Delegated Regulation 2020/1230, EDW systems are protected
+                from misuse, unauthorised access, and attacks.</p>
+            <p>EDW's technical and organisational measures ensure the security and integrity of the information uploaded
+                to its platform and has regularly tested mechanisms in place to ensure the continuity of its services in
+                case of disruptive events.</p>
+            <p>Information from reporting entities is transmitted through secure machine-to-machine interfaces and SSH
+                File Transfer Protocol.</p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+<section class="content-section">
+    <h2 class="section-title">Benefits of EDW's Platform at a Glance</h2>
+    <div class="benefits-grid">
+        <div class="benefit-card">
+            <img src="https://eurodw.eu/wp-content/uploads/EDW_EDitor_ECB-Score.png" alt="Robust Technology"
+                class="benefit-icon">
+            <h3 class="benefit-title">Robust Technology</h3>
+            <p class="benefit-description">
+                Regulation-compliant software and secure file transfer ensure the safety
+                and integrity of data transmissions.
+            </p>
+        </div>
+        <div class="benefit-card">
+            <img src="https://eurodw.eu/wp-content/uploads/EDW_EDitor_Comparison.png" alt="Global Reach"
+                class="benefit-icon">
+            <h3 class="benefit-title">Global Reach</h3>
+            <p class="benefit-description">
+                Investors worldwide access data via EDW's established network.
+            </p>
+        </div>
+        <div class="benefit-card">
+            <img src="https://eurodw.eu/wp-content/uploads/EDW_EDitor_Multiple-File-Formats.png"
+                alt="Multiple File Formats" class="benefit-icon">
+            <h3 class="benefit-title">Multiple File Formats</h3>
+            <p class="benefit-description">
+                Our platform supports multiple loan-level data file formats such as CSV,
+                XLS, and XML.
+            </p>
+        </div>
+        <div class="benefit-card">
+            <img src="https://eurodw.eu/wp-content/uploads/EDW_EDitor_Data-Quality-Checks.png" alt="Data Validation"
+                class="benefit-icon">
+            <h3 class="benefit-title">Data Validation</h3>
+            <p class="benefit-description">
+                All fields in the loan-level data files are checked against the taxonomy
+                as outlined in the ESMA and FCA data templates.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+    
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="form-container">
+            <div class="form-intro">
+                <p>Even if you're not attending the conference but you're still interested in our services, we will get
+                    in touch with you shortly.</p>
+            </div>
+
+            <!-- HubSpot form will go here -->
+            <!-- REPLACE THIS SECTION WITH HUBSPOT EMBED CODE -->
+            <!-- Instructions: Replace Portal ID and Form ID in the HubSpot script below -->
+            <!--
+            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+            <script>
+              hbspt.forms.create({
+                region: "na1",
+                portalId: "YOUR_PORTAL_ID",
+                formId: "YOUR_FORM_ID"
+              });
+            </script>
+            -->
+
+            <!-- Custom HTML Form (Alternative if not using HubSpot embed) -->
+            <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="your.email@company.com"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="firstName">First Name<span class="required">*</span></label>
+                    <input type="text" id="firstName" name="firstName" class="form-input" placeholder="John" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="lastName">Last Name<span class="required">*</span></label>
+                    <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Smith" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="company">Company Name<span class="required">*</span></label>
+                    <input type="text" id="company" name="company" class="form-input" placeholder="Your Company"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="department">Department</label>
+                    <input type="text" id="department" name="department" class="form-input" placeholder="Finance">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="role">Role<span class="required">*</span></label>
+                    <select id="role" name="role" class="form-select" required>
+                        <option value="">Please select...</option>
+                        <option value="investor">Investor</option>
+                        <option value="academic">Academic Institution</option>
+                        <option value="active_market">Active Market Participant</option>
+                        <option value="consultant">Consultant</option>
+                        <option value="data_vendor">Data Vendor</option>
+                        <option value="rating_agency">Rating Agency</option>
+                        <option value="law_firm">Law Firm</option>
+                        <option value="sell_side">Sell Side</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Are you attending the Australian Securitisation Forum Conference
+                        2025?<span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="attendingYes" name="attending" value="yes" required>
+                            <label for="attendingYes">Yes</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="attendingNo" name="attending" value="no" required>
+                            <label for="attendingNo">No</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="privacyConsent" name="privacyConsent" required>
+                    <label for="privacyConsent">
+                        I agree to the processing of my personal data in accordance with <a
+                            href="https://eurodw.eu/privacy-policy/" target="_blank">EDW's Privacy Policy</a><span
+                            class="required">*</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Get in Touch</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta">
+        <h2>Need support preparing and converting data to comply with European disclosure requirements?</h2>
+        <p>
+            Meet us at the <strong>Australian Securitisation Forum Conference 2025</strong> or
+            <a href="#contact-form">contact us today</a>.
+        </p>
+    </section>
+    
+    
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="https://eurodw.eu/privacy-policy/" target="_blank">Privacy Policy</a>
+                    <span class="divider">|</span>
+                    <a href="https://eurodw.eu/terms-of-service/" target="_blank">Terms of Service</a>
+                </div>
+                <p class="copyright">© 2025 European DataWarehouse GmbH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Form Submission Script -->
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+
+            // Validate required fields
+            if (!data.email || !data.firstName || !data.lastName || !data.company || !data.role || !data.attending || !data.privacyConsent) {
+                alert('Please fill in all required fields.');
+                return false;
+            }
+
+            // LinkedIn Conversion Tracking
+            // Replace YOUR_CONVERSION_ID with actual LinkedIn conversion ID
+            if (window.lintrk) {
+                window.lintrk('track', { conversion_id: YOUR_CONVERSION_ID });
+            }
+
+            // HubSpot Form Submission
+            // If using HubSpot API, implement submission here
+            // Example:
+            /*
+            fetch('https://api.hsforms.com/submissions/v3/integration/submit/YOUR_PORTAL_ID/YOUR_FORM_ID', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    fields: [
+                        { name: 'email', value: data.email },
+                        { name: 'firstname', value: data.firstName },
+                        { name: 'lastname', value: data.lastName },
+                        { name: 'company', value: data.company },
+                        { name: 'department', value: data.department || '' },
+                        { name: 'role', value: data.role },
+                        { name: 'attending_conference', value: data.attending }
+                    ]
+                })
+            })
+            .then(response => response.json())
+            .then(result => {
+                alert('Thank you! We will be in touch shortly.');
+                event.target.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting the form. Please try again.');
+            });
+            */
+
+            // Temporary success message (remove when HubSpot is integrated)
+            console.log('Form data:', data);
+            alert('Form submitted successfully! (Note: Connect to HubSpot to process submissions)');
+            event.target.reset();
+
+            return false;
+        }
+    </script>
+</body>
+
+</html>

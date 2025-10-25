@@ -1,129 +1,342 @@
-EDW LANDING PAGE - IMPLEMENTATION INSTRUCTIONS
-==============================================
+================================================================================
+EDW LANDING PAGE - SETUP INSTRUCTIONS
+================================================================================
 
-FILES DELIVERED:
-- landing-page.html (Complete HTML/CSS landing page)
+This document provides step-by-step instructions for configuring and uploading 
+the EDW landing page to HubSpot.
 
-IMPLEMENTATION STEPS FOR HUBSPOT:
+================================================================================
+TABLE OF CONTENTS
+================================================================================
+1. Required Assets
+2. LinkedIn Tracking Setup
+3. HubSpot Form Integration
+4. File Upload Instructions
+5. Testing Checklist
+6. Troubleshooting
 
-1. UPLOAD TO HUBSPOT
-   - Log into your HubSpot account
-   - Navigate to Marketing > Website > Website Pages
-   - Click "Create" > "Landing Page"
-   - Choose "Custom HTML" option
-   - Copy and paste the entire content from landing-page.html
-   - Save and publish
+================================================================================
+1. REQUIRED ASSETS
+================================================================================
 
-2. ADD LINKEDIN INSIGHT TAG
-   Location: In the <head> section (lines 11-21)
-   Replace the placeholder comment with your LinkedIn Insight Tag code:
-   
-   <!-- Add LinkedIn Insight Tag here -->
-   
-   Example LinkedIn Insight Tag:
-   <script type="text/javascript">
-   _linkedin_partner_id = "YOUR_PARTNER_ID";
-   window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-   window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-   </script>
-   <script type="text/javascript">
-   (function(l) {
-   if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
-   window.lintrk.q=[]}
-   var s = document.getElementsByTagName("script")[0];
-   var b = document.createElement("script");
-   b.type = "text/javascript";b.async = true;
-   b.src = "https://snap.licdn.com/li.js";
-   s.parentNode.insertBefore(b, s);})(window.lintrk);
-   </script>
-   <noscript>
-   <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=YOUR_PARTNER_ID&fmt=gif" />
-   </noscript>
+Before uploading, ensure you have all required files:
 
-3. HUBSPOT FORM INTEGRATION (Choose ONE option):
+A. HTML FILE:
+   - landing-page.html (provided)
 
-   OPTION A - Use HubSpot Form Embed (RECOMMENDED):
-   Location: In the form section (lines 519-530)
-   
-   Replace this comment block:
-   <!-- HubSpot form will go here -->
-   
-   With your HubSpot form embed code:
-   <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-   <script>
-     hbspt.forms.create({
-       region: "na1",
-       portalId: "YOUR_PORTAL_ID",
-       formId: "YOUR_FORM_ID"
-     });
-   </script>
-   
-   If using this option, you can DELETE the custom HTML form (lines 533-601)
-   
-   
-   OPTION B - Use Custom HTML Form with HubSpot API:
-   The custom HTML form is already in place (lines 533-601)
-   
-   Update the form submission script (lines 626-668):
-   - Replace YOUR_PORTAL_ID with your HubSpot Portal ID
-   - Replace YOUR_FORM_ID with your HubSpot Form ID
-   - Uncomment the fetch() API call section (lines 636-660)
-   
-   Make sure to map the form fields correctly in HubSpot:
-   - email → email
-   - firstName → firstname
-   - lastName → lastname
-   - company → company
-   - department → department (create custom field if needed)
-   - role → role (create custom field with dropdown options)
-   - attending → attending_conference (create custom field with Yes/No options)
+B. IMAGE FILES (located in /public/ directory):
+   - EDWLOGO.jpg (company logo)
+   - sydneyimg.jpg (hero section background)
+   - monitor_mockup.png (laptop frame for slider)
+   - Editor-Slide1.jpg (slider image 1)
+   - Editor-Slide2.jpg (slider image 2)
+   - Editor-Slide3.jpg (slider image 3)
+   - Editor-Slide4.jpg (slider image 4)
+   - Editor-Slide5.jpg (slider image 5)
 
-4. LINKEDIN CONVERSION TRACKING
-   Location: In the form submission script (lines 625-626)
-   
-   Replace YOUR_CONVERSION_ID with your actual LinkedIn Conversion ID:
-   window.lintrk('track', { conversion_id: YOUR_CONVERSION_ID });
+C. FONT FILES (located in /fonts/ directory):
+   - dinnextltpro-boldcondensed_69841e7000c56cd8442d02772424f7b7.woff
+   - fontawesome-webfont_674f50d287a8c48dc19ba404d20fe713.eot
+   - fontawesome-webfont_af7ae505a9eed503f8b8e6982036873e.woff2
+   - fontawesome-webfont_fee66e712a8a08eef5805a46892932ad.woff
+   - fontawesome-webfont_b06871f281fee6b241d60582ae9369b9.ttf
+   - ionicons_b72f7ac0350a9da5c3c7138242cff49c.woff2
+   - ionicons_9ee3cb02c68e5b155f86c5fb69b824ae.woff
+   - ionicons_24712f6c47821394fba7942fbb52c3b2.ttf
+   - MaterialIcons-Regular_570eb83859dc23dd0eec423a49e147fe.woff2
+   - MaterialIcons-Regular_012cf6a10129e2275d79d6adac7f3b02.woff
+   - MaterialIcons-Regular_a37b0c01c0baf1888ca812cc0508f6e2.ttf
+   - MaterialIcons-Regular_e79bfd88537def476913f3ed52f4f4b3.eot
+   - opensans-regular_90bd064f729e4f8dc4c6f7ed1ce94e02.woff
+   - opensans-light_00933144c44e5fee55179f7beea1f056.woff
+   - opensans-semibold_ca94ffd2f67936c1618ae401e678eb29.woff
+   - opensans-bold_7f6d989efa6ddcbe6ff26a6e30fcfc94.woff
+   - KFOMCnq (multiple weight variants - 9 files total)
 
-5. BRANDING CUSTOMIZATION (Optional)
-   - Logo: Replace the SVG logo (lines 358-362) with your actual EDW logo image
-     Example: <img src="your-logo.png" alt="European DataWarehouse" class="logo">
-   - Colors: All colors are defined in CSS variables (lines 26-37)
-     Adjust if needed to match exact brand colors
-   - Hero Background: Currently uses gradient - can replace with image if preferred
+================================================================================
+2. LINKEDIN TRACKING SETUP
+================================================================================
 
-6. TESTING CHECKLIST
-   ✓ LinkedIn Insight Tag loads correctly (check browser console)
-   ✓ Form submits successfully to HubSpot
-   ✓ Form validation works for all required fields
-   ✓ LinkedIn conversion tracking fires on form submission
-   ✓ Privacy policy links work correctly
-   ✓ Responsive design works on mobile, tablet, desktop
-   ✓ All content displays correctly
+You need to add LinkedIn tracking code in TWO locations:
 
-FORM FIELD MAPPING FOR HUBSPOT:
+-------------------------------------------
+LOCATION 1: LinkedIn Insight Tag (Header)
+-------------------------------------------
+LINE NUMBER: 16-24 in landing-page.html
 
-Custom fields you may need to create in HubSpot:
-1. "department" - Single-line text
-2. "role" - Dropdown select with options:
-   - Investor
-   - Academic Institution
-   - Active Market Participant
-   - Consultant
-   - Data Vendor
-   - Rating Agency
-   - Law Firm
-   - Sell Side
-   - Other
-3. "attending_conference" - Radio select with options: Yes / No
+FIND THIS SECTION:
+    <!-- LinkedIn Insight Tag - REPLACE WITH ACTUAL TAG -->
+    <script type="text/javascript">
+        <!-- Add LinkedIn Insight Tag here -->
+        /*
+        Example:
+        _linkedin_partner_id = "YOUR_PARTNER_ID";
+        ...
+        */
+    </script>
 
-SUPPORT:
-- HubSpot form creation: https://knowledge.hubspot.com/forms/create-forms
-- LinkedIn Insight Tag: https://business.linkedin.com/marketing-solutions/insight-tag
-- LinkedIn Conversion Tracking: https://business.linkedin.com/marketing-solutions/conversion-tracking
+REPLACE WITH:
+    <!-- LinkedIn Insight Tag -->
+    <script type="text/javascript">
+        _linkedin_partner_id = "YOUR_PARTNER_ID";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+        (function(l) {
+            if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+            window.lintrk.q=[]}
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript";b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+        })(window.lintrk);
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none;" alt="" 
+        src="https://px.ads.linkedin.com/collect/?pid=YOUR_PARTNER_ID&fmt=gif" />
+    </noscript>
 
-NOTES:
-- The page is fully responsive and works on all devices
-- All external links open in new tabs
-- Form includes client-side validation
-- Privacy policy checkbox is required before submission
-- Page follows the exact styling of the reference EDW website
+IMPORTANT: Replace "YOUR_PARTNER_ID" with your actual LinkedIn Partner ID
+(appears twice in the code above)
+
+-------------------------------------------
+LOCATION 2: LinkedIn Conversion Tracking
+-------------------------------------------
+LINE NUMBER: 892 in landing-page.html
+
+FIND THIS CODE:
+    // LinkedIn Conversion Tracking
+    // Replace YOUR_CONVERSION_ID with actual LinkedIn conversion ID
+    if (window.lintrk) {
+        window.lintrk('track', { conversion_id: YOUR_CONVERSION_ID });
+    }
+
+REPLACE WITH:
+    // LinkedIn Conversion Tracking
+    if (window.lintrk) {
+        window.lintrk('track', { conversion_id: YOUR_CONVERSION_ID });
+    }
+
+IMPORTANT: Replace YOUR_CONVERSION_ID with your actual LinkedIn Conversion ID
+(numeric value, e.g., 12345678)
+
+================================================================================
+3. HUBSPOT FORM INTEGRATION
+================================================================================
+
+You have TWO options for HubSpot form integration:
+
+-------------------------------------------
+OPTION A: HubSpot Embedded Form (Recommended)
+-------------------------------------------
+
+LINE NUMBER: 1308 in landing-page.html
+
+FIND THIS SECTION:
+    <!-- HubSpot form will go here -->
+    <!-- REPLACE THIS SECTION WITH HUBSPOT EMBED CODE -->
+    <!--
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+    <script>
+      hbspt.forms.create({
+        region: "na1",
+        portalId: "YOUR_PORTAL_ID",
+        formId: "YOUR_FORM_ID"
+      });
+    </script>
+    -->
+
+REPLACE WITH:
+    <!-- HubSpot Embedded Form -->
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+    <script>
+      hbspt.forms.create({
+        region: "na1",
+        portalId: "YOUR_PORTAL_ID",
+        formId: "YOUR_FORM_ID"
+      });
+    </script>
+
+IMPORTANT: 
+- Replace YOUR_PORTAL_ID with your HubSpot Portal ID
+- Replace YOUR_FORM_ID with your HubSpot Form ID
+- If using embedded form, you should REMOVE or COMMENT OUT the custom HTML form 
+  (lines 792-865)
+
+-------------------------------------------
+OPTION B: HubSpot API Integration
+-------------------------------------------
+
+If you prefer to keep the custom form and submit via API:
+
+LINE NUMBER: 1443 in landing-page.html
+
+FIND THIS SECTION:
+    // HubSpot Form Submission
+    // If using HubSpot API, implement submission here
+    /*
+    fetch('https://api.hsforms.com/submissions/v3/integration/submit/YOUR_PORTAL_ID/YOUR_FORM_ID', {
+    ...
+
+UNCOMMENT and REPLACE:
+    fetch('https://api.hsforms.com/submissions/v3/integration/submit/YOUR_PORTAL_ID/YOUR_FORM_ID', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            fields: [
+                { name: 'email', value: data.email },
+                { name: 'firstname', value: data.firstName },
+                { name: 'lastname', value: data.lastName },
+                { name: 'company', value: data.company },
+                { name: 'department', value: data.department || '' },
+                { name: 'role', value: data.role },
+                { name: 'attending_conference', value: data.attending }
+            ]
+        })
+    })
+    .then(response => response.json())
+    .then(result => {
+        alert('Thank you! We will be in touch shortly.');
+        event.target.reset();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error submitting the form. Please try again.');
+    });
+
+IMPORTANT:
+- Replace YOUR_PORTAL_ID with your HubSpot Portal ID
+- Replace YOUR_FORM_ID with your HubSpot Form ID
+- Ensure your HubSpot form has matching field names
+- REMOVE the temporary success message (lines 924-926)
+
+================================================================================
+4. FILE UPLOAD INSTRUCTIONS
+================================================================================
+
+STEP 1: Upload Assets to HubSpot
+---------------------------------
+1. Log into your HubSpot account
+2. Navigate to Marketing > Files and Templates > Files
+3. Create folder structure:
+   - /fonts/ (upload all font files here)
+   - /images/ or /public/ (upload all image files here)
+4. Note the URLs of uploaded files
+
+STEP 2: Update File Paths
+--------------------------
+If HubSpot file URLs differ from current paths, update these references:
+
+IMAGES:
+- Line 712: <img src="/public/EDWLOGO.jpg" ... >
+- Line 717: <img src="/public/sydneyimg.jpg" ... >
+- Line 734: <img src="/public/monitor_mockup.png" ... >
+- Lines 741-769: Editor-Slide1.jpg through Editor-Slide5.jpg
+
+FONTS:
+- Lines 27-143: All @font-face src: url('fonts/...') references
+
+STEP 3: Upload HTML to HubSpot
+-------------------------------
+1. In HubSpot, go to Marketing > Files and Templates > Design Tools
+2. Create new HTML + HubL template or coded file
+3. Paste the modified landing-page.html content
+4. Save and publish
+
+STEP 4: Create Landing Page
+----------------------------
+1. Go to Marketing > Website > Landing Pages
+2. Create new landing page using your uploaded template
+3. Set page URL and meta information
+4. Publish the page
+
+================================================================================
+5. TESTING CHECKLIST
+================================================================================
+
+After uploading, verify the following:
+
+[ ] Logo displays correctly in header
+[ ] Hero image loads properly
+[ ] All 5 slider images display correctly
+[ ] Slider navigation arrows work
+[ ] Slider dots navigation works
+[ ] Form fields are all functional
+[ ] Form validation works (required fields)
+[ ] Form submission works (test with real data)
+[ ] LinkedIn tracking fires (check LinkedIn Campaign Manager)
+[ ] Mobile responsive design works correctly
+[ ] All fonts load properly (no fallback fonts showing)
+[ ] Privacy Policy and Terms of Service links work
+[ ] Contact form link scrolls to form section
+
+MOBILE TESTING:
+[ ] Test on iPhone/iOS
+[ ] Test on Android
+[ ] Test on tablet devices
+[ ] Verify slider swipe gestures work
+[ ] Check form usability on mobile
+
+================================================================================
+6. TROUBLESHOOTING
+================================================================================
+
+ISSUE: Images not displaying
+SOLUTION: 
+- Verify image file paths match HubSpot uploaded file URLs
+- Check file permissions in HubSpot File Manager
+- Ensure images are publicly accessible
+
+ISSUE: Fonts not loading
+SOLUTION:
+- Verify all font files uploaded to HubSpot
+- Update @font-face src URLs to match HubSpot file URLs
+- Check browser console for 404 errors
+- Ensure CORS headers allow font loading
+
+ISSUE: Form not submitting
+SOLUTION:
+- Check browser console for JavaScript errors
+- Verify HubSpot Portal ID and Form ID are correct
+- Ensure HubSpot form fields match HTML form field names
+- Test with HubSpot form preview tool
+
+ISSUE: LinkedIn tracking not firing
+SOLUTION:
+- Verify Partner ID and Conversion ID are correct
+- Check LinkedIn Campaign Manager for tracking status
+- Use browser developer tools to verify lintrk script loads
+- Wait 24-48 hours for data to appear in LinkedIn
+
+ISSUE: Slider not working
+SOLUTION:
+- Check browser console for JavaScript errors
+- Verify all slider images loaded correctly
+- Test arrow buttons and dot navigation separately
+- Try refreshing page cache
+
+================================================================================
+SUPPORT CONTACT
+================================================================================
+
+If you encounter issues not covered in this document, please contact:
+[Your contact information here]
+
+================================================================================
+REVISION HISTORY
+================================================================================
+
+Version 1.0 - Initial delivery
+- Complete landing page HTML/CSS
+- LinkedIn tracking integration points
+- HubSpot form integration options
+- Mobile-responsive design
+- Image slider functionality
+
+================================================================================
+END OF INSTRUCTIONS
+================================================================================
